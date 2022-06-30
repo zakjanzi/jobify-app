@@ -8,6 +8,8 @@ app.get("/", (req, res) => {
 const port = process.env.PORT || 5000
 
 
+//middleware goes here
+
 application.listen(port, () => {
-    console.log(`Server is listening on port ${port}`)
+    console.log(`Server is moss on port ${port}`)
 })
