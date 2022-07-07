@@ -14,7 +14,7 @@ const Landing = () => {
           <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
           </p>
-          <button className="btn btn-hero">Login or Register</button>
+          <button className="btn btn-hero">Login/Register</button>
         </div>
       </div>
 
