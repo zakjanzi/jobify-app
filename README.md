@@ -2,4 +2,6 @@
 
 #### Track Your Job Search
 
+A MERN app.
+
 Live on: https://zak-jobify-mern.netlify.app
