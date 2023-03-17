@@ -99,7 +99,7 @@ const Register = () => {
             });
           }}
         >
-          {isLoading ? 'loading...' : 'demo app'}
+          {isLoading && 'loading...'}
         </button>
         <p>
           {values.isMember ? 'Not a member yet?' : 'Already a member?'}
