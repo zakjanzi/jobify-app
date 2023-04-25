@@ -4,4 +4,4 @@
 
 A MERN app.
 
-Live on: https://zak-jobify-mern.netlify.app
+Live on: https://zak-jobify.netlify.app/landing
