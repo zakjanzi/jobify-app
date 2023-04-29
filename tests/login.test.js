@@ -5,18 +5,17 @@ import { describe, it } from 'mocha';
 chai.use(chaiHttp);
 const expect = chai.expect;
 
-
 const appUrl = 'https://zak-jobify.netlify.app';
 const agent = chai.request.agent(appUrl);
 
-describe('Login and Logout', () => {
+export function testLoginAndLogout() {
   it('should login and logout user', async () => {
 
     // Visit landing page
     const landingRes = await chai.request(appUrl).get('/landing');
     expect(landingRes).to.have.status(200);
 
-    // Login user
+    // Log in user
     const loginRes = await agent.post('/api/v1/auth/login').send({
       email: 'test4@example.com',
       password: 'test123',
@@ -29,6 +28,5 @@ describe('Login and Logout', () => {
       .get('/logout')
       .set('Cookie', loginRes.headers['set-cookie']);
     expect(logoutRes).to.have.status(200);
-
   }).timeout(5000);
-});
+}
