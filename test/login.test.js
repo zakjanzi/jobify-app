@@ -14,6 +14,7 @@ export function testLoginAndLogout() {
     // Visit landing page
     const landingRes = await chai.request(appUrl).get('/landing');
     expect(landingRes).to.have.status(200);
+    console.log('landingRes:', landingRes);
 
     // Log in user
     const loginRes = await agent.post('/api/v1/auth/login').send({
@@ -21,6 +22,7 @@ export function testLoginAndLogout() {
       password: 'test123',
     });
     expect(loginRes).to.have.status(200);
+    console.log('loginRes:', loginRes);
 
     // Log out user
     const logoutRes = await chai
@@ -28,5 +30,7 @@ export function testLoginAndLogout() {
       .get('/logout')
       .set('Cookie', loginRes.headers['set-cookie']);
     expect(logoutRes).to.have.status(200);
+    console.log('logoutRes:', logoutRes);
+    
   }).timeout(5000);
 }
